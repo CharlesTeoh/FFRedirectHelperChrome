@@ -9,7 +9,7 @@
       "32":"icons/themes/light/tools-32.png",
       "64":"icons/themes/light/tools-64.png"
   },
-  "homepage_url":"https://github.com/RaymondLewandowskiAKQA/FFRedirectHelper",
+  "homepage_url":"https://github.com/CharlesTeoh/FFRedirectHelperChrome",
 
   "permissions": [
     "<all_urls>",
@@ -17,7 +17,6 @@
     "contextMenus",
     "storage",
     "tabs",
-    "theme",
     "webRequest", 
     "webRequestBlocking"
   ],
@@ -27,12 +26,17 @@
     "open_in_tab":true
   },
 
+
   "background": {
     "persistent":true,
-    "scripts": [
-      "scripts/background.mjs"
-    ]
+    "page": "background.html"
   },
+
+
+
+  "web_accessible_resources": [
+    "scripts/globals.mjs"
+ ],
 
   "page_action": {
     "default_icon": {

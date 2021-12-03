@@ -1,22 +1,24 @@
 // CONTANTS
-export var AUTHOR_PATH = "/cf",
-           SITEADMIN_PATH = "/siteadmin",
-           TOUCH_PATH = "/editor.html",
-           WCMMODE = "wcmmode",
-           HTML_EXT = "html",
+export var AUTHOR_PATH = "/cf", //passed
+           SITEADMIN_PATH = "/siteadmin", //passed
+           TOUCH_PATH = "/editor.html", //passed
+           WCMMODE = "wcmmode", //passed
+           HTML_EXT = "html", //passed
            
-           AUTHOR = "author",
-           PREVIEW = "preview",
-           PUBLISHED = "published",
+           AUTHOR = "author", //passed
+           PREVIEW = "preview", //passed
+           PUBLISHED = "published", //passed
            
-           HIDDEN = "hidden",
-           TEMPLATE = "template",
+           HIDDEN = "hidden", //passed
+           TEMPLATE = "template", //passed
            
-           THEME_PATH = "icons/themes",
+           THEME_PATH = "icons/themes", //passed
            
-           HAS_EXTENSION_API = (typeof browser!=="undefined"),
+           // HAS_EXTENSION_API = (typeof browser!=="undefined"), //failed
            
-           BROWSER_STORAGE = HAS_EXTENSION_API ? browser.storage.local : undefined;
+           // BROWSER_STORAGE = HAS_EXTENSION_API ? chrome.storage.local : undefined; //failed
+
+           BROWSER_STORAGE = chrome.storage.local;
 
 // BASIC STRING/URL FUNCTIONS
 

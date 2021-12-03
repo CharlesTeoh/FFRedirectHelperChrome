@@ -4,8 +4,18 @@
 // this is a awkward and only partially functional workaround
 import("./globals.mjs").then((globals)=>{
 
+  if(globals) console.log("We're in!");
+  else console.log("Houston, we have a problem!");
+
+  if(globals.BROWSER_STORAGE) console.log("Sector clear!");
+  else console.log("Mayday, mayday!");
+
+  // const globals = import("./globals.mjs");
+
   const CONTENT_SCRIPT_PATH = "/scripts/content-script.js",
         CONTENT_STYLE_PATH = "/styles/content-styles.css";
+
+  const browser = chrome;      
 
   const DEFAULT_SITE = {
     name:"Unknown",
@@ -27,6 +37,7 @@ import("./globals.mjs").then((globals)=>{
   // initialize browser storage 
   globals.BROWSER_STORAGE.get()
   .then((data)=>{
+    
     var uninitialized = getUndefinedVariableMap(data,{
       sites:[],
       outlinedTabs:[],
