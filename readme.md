@@ -7,5 +7,5 @@
 
 # Credits
 
-Extension originally developed by Raymond Lewandowski IV
-Chrome version developed by Zhi Charles Teoh
+- Extension originally developed by Raymond Lewandowski IV
+- Chrome version developed by Zhi Charles Teoh
